@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #06b6d4, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+.decorations {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.decoration {
+    height: 4px;
+    border-radius: 2px;
+}
+
+.decoration-1 {
+    width: 64px;
+    background: linear-gradient(90deg, #ec4899, #8b5cf6);
+}
+
+.decoration-2 {
+    width: 96px;
+    background: linear-gradient(90deg, #8b5cf6, #3b82f6);
+}
+
+.decoration-3 {
+    width: 64px;
+    background: linear-gradient(90deg, #3b82f6, #06b6d4);
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.upload-area {
+    position: relative;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    padding: 4rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.upload-area:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.upload-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 1rem;
+    stroke: rgba(255, 255, 255, 0.5);
+    stroke-width: 2;
+}
+
+.upload-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+}
+
+.crop-container {
+    margin-bottom: 2rem;
+}
+
+.crop-area {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.crop-image {
+    width: 100%;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.crop-image:hover {
+    transform: scale(1.02);
+}
+
+.crop-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05));
+    pointer-events: none;
+}
+
+.crop-button {
+    width: 100%;
+    background: linear-gradient(90deg, #06b6d4, #3b82f6);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.crop-button:hover {
+    background: linear-gradient(90deg, #0596c7, #2563eb);
+    transform: scale(1.02);
+}
+
+.result-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.result-title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.ready-badge {
+    background: linear-gradient(90deg, #ec4899, #8b5cf6);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+}
+
+.result-image {
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.result-image:hover {
+    transform: scale(1.02);
+}
+
+.download-button {
+    width: 100%;
+    background: linear-gradient(90deg, #8b5cf6, #ec4899);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.download-button:hover {
+    background: linear-gradient(90deg, #7c3aed, #be4fdf);
+    transform: scale(1.02);
+}
